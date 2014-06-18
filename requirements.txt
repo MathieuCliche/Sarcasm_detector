@@ -19,13 +19,9 @@ Jinja2==2.6
 Markdown==2.2.1
 MarkupSafe==0.23
 MySQL-python==1.2.4
-Orange==2.7.5
-PIL==1.1.7
-PyBrain==0.3
 PySAL==1.7.0
 PyYAML==3.10
 SQLAlchemy==0.8.0b2
-Theano==0.6.0
 WTForms==1.0.3
 WebOb==1.4
 Werkzeug==0.8.3
@@ -42,7 +38,6 @@ itsdangerous==0.24
 matplotlib==1.3.1
 mysql-connector-python==1.0.12
 networkx==1.8.1
-neurolab==0.3.4
 nltk==2.0.4
 nose==1.3.0
 numpy==1.7.2rc1
@@ -58,7 +53,6 @@ pyparsing==2.0.1
 pytest==2.5.0
 python-dateutil==1.5
 python-openid==2.2.5
-python-twitter==1.1
 pytools==2013.5.7
 pywin32==218
 requests==2.3.0
@@ -69,6 +63,3 @@ simplejson==3.5.2
 six==1.4.1
 threadpool==1.2.7
 tweepy==2.3.0
-twitter==1.14.3
-webapp2==2.5.2
-wsgiref==0.1.2
