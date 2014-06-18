@@ -1,4 +1,4 @@
-numpy==1.7.2
+numpy==1.8.1
 scipy==0.13.1
 Flask==0.9
 Flask-Admin==1.0.4
