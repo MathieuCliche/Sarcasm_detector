@@ -1,4 +1,4 @@
-numpy==1.7.2rc1
+numpy==1.7.2
 scipy==0.13.1
 Cython==0.20.1
 Flask==0.9
