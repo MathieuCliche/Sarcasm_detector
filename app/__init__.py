@@ -31,5 +31,5 @@ app.add_url_rule('/',view_func=Main.as_view('main'), methods=["GET"])
 app.add_url_rule('/about/',view_func=About.as_view('about'), methods=["GET"])
 app.add_url_rule('/contact/',view_func=Contact.as_view('contact'), methods=["GET"])
 
-app.debug = True
-app.run()
+#app.debug = True
+#app.run()
