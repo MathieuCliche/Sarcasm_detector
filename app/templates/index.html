@@ -21,7 +21,7 @@
         <div class="contentBox">
     	<div class="innerBox">
 <form class="form-search" style="text-align:center;" >	
-<textarea style="width:100%"rows="4" name="a" class="input-xxlarge" placeholder="Enter a sentence to test here."></textarea>
+<textarea style="width:100%"rows="4" name="sentence" class="input-xxlarge" placeholder="Enter a sentence to test here."></textarea>
 				        <br /><br />
 <a href="#" id=calculate class="prettybutton">Test</a>
 </form>
@@ -49,7 +49,7 @@
   $(function() {
     $('a#calculate').bind('click', function() {
       $.getJSON($SCRIPT_ROOT + '/_compute', {
-        a: $('textarea[name="a"]').val()}, function(data) {
+        sentence: $('textarea[name="sentence"]').val()}, function(data) {
         $("#result").text(data.result);
       });
       return false;
