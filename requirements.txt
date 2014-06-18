@@ -1,5 +1,5 @@
-numpy==1.8.1
-scipy==0.13.1
+numpy==1.7.0
+scipy==0.11.0
 Flask==0.9
 Flask-Admin==1.0.4
 Flask-Bootstrap==2.2.2-1
