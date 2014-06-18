@@ -72,4 +72,3 @@ tweepy==2.3.0
 twitter==1.14.3
 webapp2==2.5.2
 wsgiref==0.1.2
-gunicorn==0.17.2
