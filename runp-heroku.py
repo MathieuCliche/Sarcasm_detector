@@ -1,6 +1,6 @@
 #from app import app
 
-import flask
+import flask, flask.views
 
 app = flask.Flask(__name__)
 
