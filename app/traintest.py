@@ -5,6 +5,7 @@ from sklearn.svm import LinearSVC
 from sklearn import svm
 from sklearn.metrics import classification_report
 from sklearn.feature_extraction import DictVectorizer
+import pickle
 
 
 def dialogue_act_features(sentence):
@@ -42,6 +43,14 @@ targets=(featuresets[0::,1]=='Sarcastic').astype(int)
 vec = DictVectorizer()
 featurevec = vec.fit_transform(featuresets[0::,0])
 
+
+#Saving the dictionnary vectorizer
+file_Name = "vecdict"
+fileObject = open(file_Name,'wb') 
+pickle.dump(vec, fileObject)
+fileObject.close()
+
+
 basic_test=['I just love when you make me feel like shit','Life is odd','Just got back to the US !', "Isn'it great when your girlfriend dumps you ?", "I love my job !", 'I love my son !']
 feature_basictest=[]
 for tweet in basic_test: 
@@ -69,6 +78,12 @@ print 'Training'
 
 classifier = LinearSVC()#
 classifier.fit(trainvec,train_targets)
+
+#Saving the classifier
+file_Name = "classif"
+fileObject = open(file_Name,'wb') 
+pickle.dump(classifier, fileObject)
+fileObject.close()
 
 print 'Validating'
 

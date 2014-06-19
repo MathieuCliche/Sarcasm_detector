@@ -1,6 +1,7 @@
 import flask, flask.views
 from flask import Markup
 from flask import jsonify
+import evaluate
 
 app = flask.Flask(__name__)
 
@@ -24,7 +25,8 @@ app.add_url_rule('/contact/',view_func=Contact.as_view('contact'), methods=["GET
 @app.route('/_compute')
 def compute():
     sentence = flask.request.args.get('sentence')
-    return jsonify(result='Score = '+str(5)+sentence+' %')
+    percentage = evaluate.tweetscore(sentence)
+    return jsonify(result='Sarcasm percentage = '+str(percentage)+' %')
 
-app.debug = True
-app.run()
+#app.debug = True
+#app.run()
