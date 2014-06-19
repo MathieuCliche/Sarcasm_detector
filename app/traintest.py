@@ -45,7 +45,7 @@ featurevec = vec.fit_transform(featuresets[0::,0])
 
 
 #Saving the dictionnary vectorizer
-file_Name = "vecdict"
+file_Name = "vecdict.pkl"
 fileObject = open(file_Name,'wb') 
 pickle.dump(vec, fileObject)
 fileObject.close()
@@ -80,7 +80,7 @@ classifier = LinearSVC()#
 classifier.fit(trainvec,train_targets)
 
 #Saving the classifier
-file_Name = "classif"
+file_Name = "classif.pkl"
 fileObject = open(file_Name,'wb') 
 pickle.dump(classifier, fileObject)
 fileObject.close()

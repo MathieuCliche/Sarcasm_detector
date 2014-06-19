@@ -2,8 +2,8 @@ import nltk
 import numpy as np
 import pickle
 
-fileObject1 = open('vecdict','r')
-fileObject2= open('classif','r') 
+fileObject1 = open('vecdict.pkl','r')
+fileObject2= open('classif.pkl','r') 
 vec = pickle.load(fileObject1)
 classifier = pickle.load(fileObject2)
 fileObject1.close()
