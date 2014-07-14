@@ -17,8 +17,8 @@ classifier = pickle.load(fileObject2)
 fileObject1.close()
 fileObject2.close()
 
-topic_mod = topic.topic(model=os.path.join(os.path.dirname(os.path.realpath(__file__)), 'topics.tp'),\
-                        dicttp=os.path.join(os.path.dirname(os.path.realpath(__file__)), 'topics_dict.tp'))
+topic_mod =0# topic.topic(model=os.path.join(os.path.dirname(os.path.realpath(__file__)), 'topics.tp'),\
+             #           dicttp=os.path.join(os.path.dirname(os.path.realpath(__file__)), 'topics_dict.tp'))
 
 def tweetscore(sentence):
     
