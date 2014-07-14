@@ -13,7 +13,7 @@ app = flask.Flask(__name__)
 
 class Main(flask.views.MethodView):
     def get(self):
-        return "Hello world" #flask.render_template('index.html')
+        return flask.render_template('index.html')
 """    
 class About(flask.views.MethodView):
     def get(self):
