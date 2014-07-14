@@ -2,7 +2,6 @@ import os
 import flask, flask.views
 from flask import Markup
 from flask import jsonify
-from flask.ext.rqify import init_rqify
 import evaluate
 
 app = flask.Flask(__name__)
