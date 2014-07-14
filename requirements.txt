@@ -25,3 +25,4 @@ textblob==0.8.4
 PyYAML==3.11
 rq==0.4.6
 redis==2.4.11
+Flask-Heroku-RQify>=0.1
