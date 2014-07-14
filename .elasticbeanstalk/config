@@ -1,0 +1,14 @@
+[global]
+ApplicationName=Sarcasm_detector
+AwsCredentialFile=C:\Users\Mathieu\.elasticbeanstalk\aws_credential_file
+DevToolsEndpoint=git.elasticbeanstalk.us-east-1.amazonaws.com
+EnvironmentName=Sarcasmdetector-env
+EnvironmentTier=WebServer::Standard::1.0
+EnvironmentType=LoadBalanced
+InstanceProfileName=aws-elasticbeanstalk-ec2-role
+OptionSettingFile=C:\Users\Mathieu\Documents\Sarcasm_detector\.elasticbeanstalk\optionsettings.Sarcasmdetector-env
+RdsEnabled=No
+Region=us-east-1
+ServiceEndpoint=https://elasticbeanstalk.us-east-1.amazonaws.com
+SolutionStack=64bit Amazon Linux 2014.03 v1.0.3 running Python 2.7
+
