@@ -1,4 +1,14 @@
-import flask, flask.views
+import os
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def hello():
+    return 'Hello World!'
+
+
+"""import flask, flask.views
 from flask import Markup
 from flask import jsonify
 import evaluate
@@ -29,4 +39,4 @@ def compute():
     return jsonify(result=percentage)
 
 #app.debug = True
-#app.run()
+#app.run()"""
