@@ -7,7 +7,7 @@ app = Flask(__name__)
 def hello():
     return 'Hello World!'
 
-
+app.run()
 """import flask, flask.views
 from flask import Markup
 from flask import jsonify

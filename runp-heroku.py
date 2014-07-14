@@ -1,2 +1,1 @@
-#from app import __init__
-import app
+from app import __init__
