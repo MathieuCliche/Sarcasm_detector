@@ -26,7 +26,7 @@ app.add_url_rule('/contact/',view_func=Contact.as_view('contact'), methods=["GET
 def compute():
     sentence = flask.request.args.get('sentence')
     percentage = evaluate.tweetscore(sentence)
-    return jsonify(result='Sarcasm percentage = '+str(percentage)+' %')
+    return jsonify(result=percentage)
 
 #app.debug = True
 #app.run()

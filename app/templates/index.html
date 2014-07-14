@@ -25,37 +25,50 @@
 				        <br /><br />
 <a href="#" id=calculate class="prettybutton">Test</a>
 </form>
-<br /><br />
-<h2> 
-<div style="text-align: center;">
- <span align=center id=result></span> 
-</div>
-</h2>
 
-
+ <div id="gauge" style="width:300px; height:240px"></div> 
    
-    </div>
 
+    </div>
 
 
       </div> <!-- /container -->
 
+
     <script src="../static/js/jquery-1.11.1.min.js"></script>
+<script src="../static/js/raphael.2.1.0.min.js"></script>
+    <script src="../static/js/justgage.1.0.1.min.js"></script>
+
+
 <script type=text/javascript>
   $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
 </script>
 
 <script type=text/javascript>
+
   $(function() {
     $('a#calculate').bind('click', function() {
       $.getJSON($SCRIPT_ROOT + '/_compute', {
         sentence: $('textarea[name="sentence"]').val()}, function(data) {
         $("#result").text(data.result);
+g.refresh(data.result);
       });
       return false;
     });
   });
+
+var g;
+  var g = new JustGage({
+    id: "gauge", 
+    value: 0, 
+    min: -100,
+    max: 100,
+    gaugeWidthScale : 1.0,
+    levelColors : [  "#FFFF00", "#32127a",  "#FF0000" ],
+    title: "Sarcasm Percentage"
+  }); 
 </script>
+
 
 </body>
 </html>
