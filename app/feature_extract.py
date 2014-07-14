@@ -21,7 +21,7 @@ def dialogue_act_features(sentence,topic_modeler):
     #sent_feature(features,sentence)
     #pos_feature(features,sentence)
     #cap_feature(features,sentence)
-    #topic_feature(features,sentence,topic_modeler)
+    topic_feature(features,sentence,topic_modeler)
     
     return features
     
