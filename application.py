@@ -9,7 +9,7 @@ application = flask.Flask(__name__)
 
 class Main(flask.views.MethodView):
     def get(self):
-        return flask.render_template('index.html')
+        return "Hello world" #flask.render_template('index.html')
     
 """
    
