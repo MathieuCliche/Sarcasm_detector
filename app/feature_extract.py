@@ -11,14 +11,14 @@ import exp_replace
 
 print 'Loading files'
 porter = nltk.PorterStemmer()
-sentiments = load_sent.load_sent_word_net()
+#sentiments = load_sent.load_sent_word_net()
 
 def dialogue_act_features(sentence,topic_modeler):
         
     features = {}
     
     grams_feature(features,sentence)
-    sent_feature(features,sentence)
+    #sent_feature(features,sentence)
     pos_feature(features,sentence)
     cap_feature(features,sentence)
     #topic_feature(features,sentence,topic_modeler)
