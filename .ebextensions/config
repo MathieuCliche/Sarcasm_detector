@@ -1,15 +1,3 @@
-packages:
-  yum:
-    gcc-c++: []
-    gcc-gfortran: []
-    python-devel: []
-    atlas-sse3-devel: []
-    lapack-devel: []
-    libpng-devel: []
-    freetype-devel: []
-    zlib-devel: []
-
-
 [global]
 ApplicationName=Sarcasm_detector
 AwsCredentialFile=C:\Users\Mathieu\.elasticbeanstalk\aws_credential_file
