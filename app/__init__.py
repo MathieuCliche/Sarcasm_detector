@@ -7,7 +7,7 @@ from flask.ext.rq import job
 import evaluate
 
 app = flask.Flask(__name__)
-init_rqify(app)
+#init_rqify(app)
 
 class Main(flask.views.MethodView):
     def get(self):
@@ -34,7 +34,7 @@ def compute():
     percentage = process(sentence)
     return jsonify(result=percentage)
 
-@job
-def process(sentence):
-    percentage = evaluate.tweetscore(sentence)
-    return percentage
+#@job
+#def process(sentence):
+#    percentage = evaluate.tweetscore(sentence)
+#    return percentage

@@ -11,7 +11,7 @@ import exp_replace
 
 print 'Loading files'
 porter = nltk.PorterStemmer()
-sentiments = load_sent.load_sent_word_net()
+#sentiments = load_sent.load_sent_word_net()
 
 def dialogue_act_features(sentence,topic_modeler):
         
