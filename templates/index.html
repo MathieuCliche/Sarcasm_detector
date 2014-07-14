@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../static/css/anoceanofsky.css" />
+<title>The sarcasm detector</title>
+</head>
+
+<body>
+    <div id="page">
+        <div class="topNaviagationLink"><a href="{{url_for('main')}}">Home</a></div>
+        <div class="topNaviagationLink"><a href="{{url_for('about')}}">About</a></div>
+        <div class="topNaviagationLink"><a href="{{url_for('contact')}}">Contact</a></div>
+	</div>
+    <div id="mainPicture">
+    	<div class="picture">
+        	<div id="headerTitle">The sarcasm detector</div>
+            <div id="headerSubtext">Learning sarcasm from tweets!</div>
+        </div>
+    </div>
+        <div class="contentBox">
+    	<div class="innerBox">
+<form class="form-search" style="text-align:center;" >	
+<textarea style="width:100%"rows="4" name="sentence" class="input-xxlarge" placeholder="Enter a sentence to test here."></textarea>
+				        <br /><br />
+<a href="#" id=calculate class="prettybutton">Test</a>
+</form>
+
+ <div id="gauge" style="width:300px; height:240px"></div> 
+   
+
+    </div>
+
+
+      </div> <!-- /container -->
+
+
+    <script src="../static/js/jquery-1.11.1.min.js"></script>
+<script src="../static/js/raphael.2.1.0.min.js"></script>
+    <script src="../static/js/justgage.1.0.1.min.js"></script>
+
+
+<script type=text/javascript>
+  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+</script>
+
+<script type=text/javascript>
+
+  $(function() {
+    $('a#calculate').bind('click', function() {
+      $.getJSON($SCRIPT_ROOT + '/_compute', {
+        sentence: $('textarea[name="sentence"]').val()}, function(data) {
+        $("#result").text(data.result);
+g.refresh(data.result);
+      });
+      return false;
+    });
+  });
+
+var g;
+  var g = new JustGage({
+    id: "gauge", 
+    value: 0, 
+    min: -100,
+    max: 100,
+    gaugeWidthScale : 1.0,
+    levelColors : [  "#FFFF00", "#32127a",  "#FF0000" ],
+    title: "Sarcasm Percentage"
+  }); 
+</script>
+
+
+</body>
+</html>
