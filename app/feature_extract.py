@@ -17,7 +17,7 @@ def dialogue_act_features(sentence,topic_modeler):
         
     features = {}
     
-    grams_feature(features,sentence)
+    #grams_feature(features,sentence)
     #sent_feature(features,sentence)
     pos_feature(features,sentence)
     cap_feature(features,sentence)

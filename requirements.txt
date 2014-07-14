@@ -23,3 +23,4 @@ nltk==2.0.4
 scikit-learn==0.14.1
 textblob==0.8.4
 PyYAML==3.11
+rq==0.4.6
