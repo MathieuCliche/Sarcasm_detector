@@ -3,13 +3,6 @@ from flask import Markup
 from flask import jsonify
 import evaluate
 
-
-app = flask.Flask(__name__)
-
-@app.route('/')
-def hello():
-    return 'Hello World!'
-"""
 app = flask.Flask(__name__)
 
 class Main(flask.views.MethodView):
@@ -36,4 +29,4 @@ def compute():
     return jsonify(result=percentage)
 
 #app.debug = True
-#app.run() """
+#app.run()
