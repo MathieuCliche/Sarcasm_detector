@@ -2,7 +2,7 @@ import os
 import flask, flask.views
 from flask import Markup
 from flask import jsonify
-import evaluate
+#import evaluate
 
 app = flask.Flask(__name__)
 
@@ -24,9 +24,9 @@ app.add_url_rule('/about/',view_func=About.as_view('about'), methods=["GET"])
 app.add_url_rule('/contact/',view_func=Contact.as_view('contact'), methods=["GET"])
 
 
-@app.route('/_compute')
-def compute():
-    sentence = flask.request.args.get('sentence')
-    percentage = evaluate.tweetscore(sentence)
-    return jsonify(result=percentage)
+#@app.route('/_compute')
+#def compute():
+#    sentence = flask.request.args.get('sentence')
+#    percentage = evaluate.tweetscore(sentence)
+#    return jsonify(result=percentage)
 
