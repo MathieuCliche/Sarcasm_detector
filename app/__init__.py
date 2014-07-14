@@ -1,13 +1,3 @@
-import os
-from flask import Flask
-
-app = Flask(__name__)
-
-@app.route('/')
-def hello():
-    return 'Hello World!'
-
-"""
 import flask, flask.views
 from flask import Markup
 from flask import jsonify
@@ -37,4 +27,3 @@ def compute():
     sentence = flask.request.args.get('sentence')
     percentage = evaluate.tweetscore(sentence)
     return jsonify(result=percentage)
-"""
