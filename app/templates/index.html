@@ -51,7 +51,7 @@
       $.getJSON($SCRIPT_ROOT + '/_compute', {
         sentence: $('textarea[name="sentence"]').val()}, function(data) {
         $("#result").text(data.result);
-g.refresh(data.result);
+	   g.refresh(data.result);
       });
       return false;
     });

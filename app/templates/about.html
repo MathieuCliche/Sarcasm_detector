@@ -21,7 +21,60 @@
     </div>
         <div class="contentBox">
     	<div class="innerBox">
-        	<div class="contentTitle">Stay tuned ...</div>
+        	<div class="contentTitle"> Why a sarcasm detector ?</div>
+
+<br />
+          <div class="contentText"><p> This all started when I was looking for a toy project to teach myself natural language processing (NLP), a field that takes ideas from machine learning and applies them to text data.  Your email spam filter is an application of NLP; there is a learning algorithm that learns how to differentiate a spam email from a regular email by looking at the text content of the email. It had just came out in the news that the U.S. secret service were looking for a sarcasm detector to improve their intelligence coming from Twitter, and I was curious to see whether this was even possible.  This was a perfect project to use NLP, so I decided to give it a try!
+</p><br />
+
+        <p> It wasn't clear to me that this was possible because sarcasm is a complicated concept.  Let's go back to the spam filter example for a minute.  If you look at a spam filter algorithm, the features which will be most relevant to the classification of emails will be certain key words; "Notspam", "Free acess" or "Enlarge your ..." for instance.  A good learning algorithm will learn that these words are more often used in spam emails, so when presented with an email which contains these words the classifiers will classify that email as spam.  Sarcasm is more complicated, because while there maybe a few keywords which are more associated with sarcastic sentences than non-sarcastic sentences, sarcasm is often hidden in the tone and the ambivalence of the sentence itself.  Merriam-webster defines sarcasm as "the use of words that mean the opposite of what you really want to say especially in order to insult someone, to show irritation, or to be funny".  So to detect sarcasm properly a computer would have to figure out that you meant the opposite of what you just said.  It is sometimes hard for Humans to detect sarcasm, and Humans have a much better graps at the English language than computers do, so this was not going to be an easy task. 
+</p><br />
+
+
+	<div class="contentTitle">  Has this been done before?</div>
+
+<br />
+
+
+
+<div class="contentTitle">   Getting the data</div>
+<br />
+
+<div class="contentTitle">  Preprocessing the data</div>
+<br />
+
+ <div class="contentTitle">  Extracting features</div>
+<br />
+
+<div class="contentTitle">  Choosing a classifier</div>
+<br />
+
+<div class="contentTitle">  Results and insights</div>
+<br />
+
+<div class="contentTitle">  Having fun with the detector!</div>
+<br />
+
+<div class="contentTitle">  The tools used</div>
+<br />
+Here is a laundry list of tools used in this project:
+<p> <b>Backend</b>: Python with Numpy, Scipy, Scikit-learn, NLTK, gensim, Textblob and tweepy.  </p>
+<p> <b>Frontend</b>: Python with Flask, HTML, CSS, Javascript and the whole thing hosted by pythonanywhere.com.  
+<br/>
+The code can be found on https://github.com/MathieuCliche/Sarcasm_detector
+ </p>
+
+
+
+<div class="contentTitle">  Outlook
+</div>
+<br />
+
+<div class="contentTitle">  References
+</div>
+<br />
+
+
 
         </div>
     </div>
