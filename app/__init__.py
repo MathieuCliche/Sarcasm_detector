@@ -28,6 +28,6 @@ app.add_url_rule('/contact/',view_func=Contact.as_view('contact'), methods=["GET
 @app.route('/_compute')
 def compute():
     sentence = flask.request.args.get('sentence')
-    percentage = evaluate.tweetscore(sentence)
+    percentage = evaluate.tweetscore(str(sentence))
     return jsonify(result=percentage)
     
