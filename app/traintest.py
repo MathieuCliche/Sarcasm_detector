@@ -26,12 +26,6 @@ print 'Training topics'
 topic_mod = topic.topic(nbtopic=200,alpha='symmetric')
 topic_mod.fit(np.concatenate((pos_data,neg_data)))
 
-#Saving the topic modeler
-file_Name = "topic.p"
-fileObject = open(file_Name,'wb') 
-pickle.dump(topic_mod, fileObject)
-fileObject.close()
-
 print 'Feature eng'
 # label set
 cls_set = ['Non-Sarcastic','Sarcastic']
@@ -102,9 +96,6 @@ fileObject.close()
 print 'Most important features'
 
 print 'grams:'
-
-#classifier2 = nltk.NaiveBayesClassifier.train(featuresets)
-#print classifier2.show_most_informative_features(100)
 
 coeff = vec.inverse_transform(classifier.coef_[0])[0]
 largest = heapq.nlargest(int(100/2.0), coeff, key=coeff.get)
