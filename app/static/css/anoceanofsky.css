@@ -90,8 +90,8 @@ margin-left:10px;
 {
 position:relative;
 top:-30px;
-left:-65%;
-font-size:300%;
+left:-60%;
+font-size:xx-large;
 color:#000000;
 font-family:"Adobe Garamond Pro Bold", Georgia, "Times New Roman", Times, serif;
 }
@@ -101,7 +101,7 @@ font-family:"Adobe Garamond Pro Bold", Georgia, "Times New Roman", Times, serif;
 position:relative;
 top:-20px;
 left:-60%;
-font-size:175%;
+font-size:x-large;
 color:#8B0000;
 font-family:"Adobe Garamond Pro Bold", Georgia, "Times New Roman", Times, serif;
 }
