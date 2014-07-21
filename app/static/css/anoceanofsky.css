@@ -20,7 +20,7 @@ body {
   height:auto;
   position: relative; 
   overflow: hidden; 
-  width: 670px;
+  width: 80%;
 }
 
 .topNaviagationLink
@@ -88,7 +88,7 @@ margin-left:10px;
 {
 position:relative;
 top:-30px;
-margin-left:-430px;
+left:-430px;
 font-size:40px;
 color:#000000;
 font-family:"Adobe Garamond Pro Bold", Georgia, "Times New Roman", Times, serif;
@@ -98,7 +98,7 @@ font-family:"Adobe Garamond Pro Bold", Georgia, "Times New Roman", Times, serif;
 {
 position:relative;
 top:-20px;
-margin-left:-380px;
+left:-380px;
 font-size:20px;
 color:#8B0000;
 font-family:"Adobe Garamond Pro Bold", Georgia, "Times New Roman", Times, serif;
