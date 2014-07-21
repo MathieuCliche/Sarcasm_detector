@@ -20,7 +20,7 @@ body {
   height:auto;
   position: relative; 
   overflow: hidden; 
-  width: 40%;
+  width: 42%;
 }
 
 .topNaviagationLink
@@ -60,14 +60,14 @@ background-image:url(../img/tab.png);
 
 #mainPicture
 {
-width:40%;
+width:42%;
 height:345px;
 background-color:#FFFFFF;
 }
 
 #mainPicture
 {
-width:40%;
+width:42%;
 height:345px;
 background-color:#FFFFFF;
 }
@@ -88,8 +88,8 @@ margin-left:10px;
 {
 position:relative;
 top:-30px;
-left:-430px;
-font-size:40px;
+left:-65%;
+font-size:300%;
 color:#000000;
 font-family:"Adobe Garamond Pro Bold", Georgia, "Times New Roman", Times, serif;
 }
@@ -98,8 +98,8 @@ font-family:"Adobe Garamond Pro Bold", Georgia, "Times New Roman", Times, serif;
 {
 position:relative;
 top:-20px;
-left:-380px;
-font-size:20px;
+left:-60%;
+font-size:150%;
 color:#8B0000;
 font-family:"Adobe Garamond Pro Bold", Georgia, "Times New Roman", Times, serif;
 }
@@ -114,7 +114,7 @@ border: 1px solid #001F6C;
 
 .contentBox
 {
-width:40%;
+width:42%;
 min-height:250px;
 background-color:#FFFFFF;
 margin-top:10px;
@@ -152,7 +152,7 @@ margin-right:13px;
 
 #footer {
 
-width: 40%;
+width: 42%;
 height:16px;
 background: url(../img/footer.png) no-repeat;
 text-align:center;
