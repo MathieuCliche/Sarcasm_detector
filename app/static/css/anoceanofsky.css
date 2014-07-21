@@ -1,8 +1,8 @@
 
 
 body {
-	margin: 0;
-	padding: 0;
+	margin-top: 0;
+	padding-top: 40px;
 	text-align: left;
 	font-family:"Adobe Garamond Pro Bold", Georgia, "Times New Roman", Times, serif;
 	font-size: 13px;
@@ -60,6 +60,7 @@ background-image:url(../img/tab.png);
 
 }
 
+
 #mainPicture
 {
 width:670px;
@@ -89,9 +90,9 @@ margin-left:10px;
 #headerTitle
 {
 position:relative;
-top:-30px;
-left:-60%;
-font-size:xx-large;
+top:-110px;
+left:190px;
+font-size:30px;
 color:#000000;
 font-family:"Adobe Garamond Pro Bold", Georgia, "Times New Roman", Times, serif;
 }
@@ -99,9 +100,9 @@ font-family:"Adobe Garamond Pro Bold", Georgia, "Times New Roman", Times, serif;
 #headerSubtext
 {
 position:relative;
-top:-20px;
-left:-60%;
-font-size:x-large;
+top:-110px;
+left:210px;
+font-size:18px;
 color:#8B0000;
 font-family:"Adobe Garamond Pro Bold", Georgia, "Times New Roman", Times, serif;
 }
