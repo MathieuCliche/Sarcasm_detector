@@ -22,7 +22,7 @@ body {
   height:auto;
   position: relative; 
   overflow: hidden; 
-  width: 670px;
+  width: 42.2%;
 }
 
 .topNaviagationLink
@@ -62,14 +62,14 @@ background-image:url(../img/tab.png);
 
 #mainPicture
 {
-width:670px;
+width:42.2%;
 height:345px;
 background-color:#FFFFFF;
 }
 
 #mainPicture
 {
-width:670px;
+width:42.2%;
 height:345px;
 background-color:#FFFFFF;
 }
@@ -77,11 +77,11 @@ background-color:#FFFFFF;
 #mainPicture .picture
 {
 position:relative;
-width:650px;
+width:97%;
 height:325px;
 top:10px;
 background-image:url(../img/detector.jpg);
-background-size: 650px 325px;
+background-size: 100% 325px;
 background-repeat:no-repeat;
 margin-left:10px;
 }
@@ -90,7 +90,7 @@ margin-left:10px;
 {
 position:relative;
 top:-30px;
-left:-430px;
+left:-65%;
 font-size:40px;
 color:#000000;
 font-family:"Adobe Garamond Pro Bold", Georgia, "Times New Roman", Times, serif;
@@ -100,7 +100,7 @@ font-family:"Adobe Garamond Pro Bold", Georgia, "Times New Roman", Times, serif;
 {
 position:relative;
 top:-20px;
-left:-380px;
+left:-60%;
 font-size:20px;
 color:#8B0000;
 font-family:"Adobe Garamond Pro Bold", Georgia, "Times New Roman", Times, serif;
@@ -116,7 +116,7 @@ border: 1px solid #001F6C;
 
 .contentBox
 {
-width:670px;
+width:42.2%;
 min-height:250px;
 background-color:#FFFFFF;
 margin-top:10px;
@@ -126,7 +126,7 @@ margin-top:10px;
 .contentBox .innerBox
 {
 position:relative;
-width:650px;
+width:97%;
 min-height:200px;
 top:10px;
 margin-left:10px;
@@ -154,7 +154,7 @@ margin-right:13px;
 
 #footer {
 
-width: 670px;
+width: 42.2%;
 height:16px;
 background: url(../img/footer.png) no-repeat;
 text-align:center;
