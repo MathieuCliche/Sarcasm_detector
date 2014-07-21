@@ -22,7 +22,7 @@ body {
   height:auto;
   position: relative; 
   overflow: hidden; 
-  width: 42.2%;
+  width: 670px;
 }
 
 .topNaviagationLink
@@ -62,14 +62,14 @@ background-image:url(../img/tab.png);
 
 #mainPicture
 {
-width:42.2%;
+width:670px;
 height:345px;
 background-color:#FFFFFF;
 }
 
 #mainPicture
 {
-width:42.2%;
+width:670px;
 height:345px;
 background-color:#FFFFFF;
 }
@@ -77,11 +77,11 @@ background-color:#FFFFFF;
 #mainPicture .picture
 {
 position:relative;
-width:97%;
+width:650px;
 height:325px;
 top:10px;
 background-image:url(../img/detector.jpg);
-background-size: 100% 325px;
+background-size: 650px 325px;
 background-repeat:no-repeat;
 margin-left:10px;
 }
@@ -116,7 +116,7 @@ border: 1px solid #001F6C;
 
 .contentBox
 {
-width:42.2%;
+width:670px;
 min-height:250px;
 background-color:#FFFFFF;
 margin-top:10px;
@@ -126,7 +126,7 @@ margin-top:10px;
 .contentBox .innerBox
 {
 position:relative;
-width:97%;
+width:650px;
 min-height:200px;
 top:10px;
 margin-left:10px;
@@ -154,7 +154,7 @@ margin-right:13px;
 
 #footer {
 
-width: 42.2%;
+width: 670px;
 height:16px;
 background: url(../img/footer.png) no-repeat;
 text-align:center;
