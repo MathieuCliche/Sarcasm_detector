@@ -1,8 +1,6 @@
-
-
 body {
-	margin-left: -430;
-	padding: 0;
+	margin: 0;
+	padding-left: 0;
 	text-align: left;
 	font-family:"Adobe Garamond Pro Bold", Georgia, "Times New Roman", Times, serif;
 	font-size: 13px;
@@ -22,7 +20,7 @@ body {
   height:auto;
   position: relative; 
   overflow: hidden; 
-  width: 670px;
+  width: 1500px;
 }
 
 .topNaviagationLink
@@ -31,8 +29,8 @@ text-align:center;
 position:relative;
 margin-top:30px;
 font-size:16px;
-margin-left:-10px;
-width:121px;
+margin-left:0px;
+width:120px;
 height: 35px;
 line-height: 35px;
 float:left;
