@@ -2,7 +2,7 @@
 
 body {
 	margin-top: 0;
-	padding-top: 40px;
+	padding-top: 70px;
 	text-align: left;
 	font-family:"Adobe Garamond Pro Bold", Georgia, "Times New Roman", Times, serif;
 	font-size: 13px;
@@ -90,7 +90,7 @@ margin-left:10px;
 #headerTitle
 {
 position:relative;
-top:-110px;
+top:-120px;
 left:190px;
 font-size:30px;
 color:#FFFFFF;
@@ -100,7 +100,7 @@ font-family:"Adobe Garamond Pro Bold", Georgia, "Times New Roman", Times, serif;
 #headerSubtext
 {
 position:relative;
-top:-110px;
+top:-115px;
 left:210px;
 font-size:18px;
 color:#A9C8FA;
