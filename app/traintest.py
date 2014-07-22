@@ -162,7 +162,9 @@ output = classifier.predict(testvec)
 print classification_report(test_targets, output, target_names=cls_set)
 
 #BASIC TEST
-basic_test=["This is just a long sentence, to make sure that it's not how long the sentence is that matters the most",'I just love when you make me feel like shit','Life is odd','Just got back to the US !', "Isn'it great when your girlfriend dumps you ?", "I love my job !", 'I love my son !']
+basic_test=["This is just a long sentence, to make sure that it's not how long the sentence is that matters the most",\
+            'I just love when you make me feel like shit','Life is odd','Just got back to the US !', \
+            "Isn'it great when your girlfriend dumps you ?", "I love my job !", 'I love my son !']
 feature_basictest=[]
 for tweet in basic_test: 
     feature_basictest.append(feature_extract.dialogue_act_features(tweet,topic_mod))
