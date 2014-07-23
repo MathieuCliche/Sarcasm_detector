@@ -194,15 +194,11 @@ p.copyright {
     background: rgba(255, 255, 255, 0.95);
 margin: 0 auto;
 text-align: center;
-width: 600px;
+width: 40%;
+min-width: 400px;
 overflow-y: hidden; 
 }
 
-
-.container3 {
-margin: 0 23%;
-text-align: center;
-}
 
 .container4 {
   padding-right: 15px;
@@ -211,7 +207,8 @@ text-align: center;
     background: rgba(255, 255, 255, 0.97);
 margin: 0 auto;
 text-align: center;
-width: 700px;
+width: 50%;
+min-width: 400px;
 overflow-y: hidden; 
 }
 
