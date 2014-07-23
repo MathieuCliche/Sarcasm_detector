@@ -196,6 +196,7 @@ margin: 0 auto;
 text-align: center;
 width: 40%;
 min-width: 400px;
+border-radius: 10px;
 }
 
 
@@ -209,6 +210,7 @@ text-align: center;
 width: 50%;
 min-width: 400px;
 overflow-y: hidden; 
+border-radius: 10px;
 }
 
 
