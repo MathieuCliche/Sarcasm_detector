@@ -66,24 +66,22 @@
 <br/>
 					  <a href="#" id=calculate button type="submit" class="btn btn-warning btn-lg" style="color: #FFFFFF;">Test</a>
  <div id="gauge" style="width:300px; height:240px; margin: 0 auto;"></div> 
+		</form>	
+	</div>
+</div>	
+								    
 
-
-					</form>	
-
-			</div>
-				</div>
-									    
-
-    <script src="../static/js/jquery-1.11.1.min.js"></script>
+<script src="../static/js/jquery-1.11.1.min.js"></script>
 <script src="../static/js/bootstrap.min.js"></script>
 
 <script src="../static/js/raphael.2.1.0.min.js"></script>
-    <script src="../static/js/justgage.1.0.1.min.js"></script>
+<script src="../static/js/justgage.1.0.1.min.js"></script>
 
 
 <script type=text/javascript>
   $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
 </script>
+
 
 <script type=text/javascript>
 
@@ -111,7 +109,6 @@ var g;
     labelFontColor : "black"
   }); 
 </script>
-
 
 
 
