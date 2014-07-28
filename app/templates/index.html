@@ -68,8 +68,7 @@
  <div id="gauge" style="width:300px; height:240px; margin: 0 auto;"></div> 
 		</form>	
 	</div>
-</div>	
-								    
+</div>								    
 
 <script src="../static/js/jquery-1.11.1.min.js"></script>
 <script src="../static/js/bootstrap.min.js"></script>
@@ -77,11 +76,9 @@
 <script src="../static/js/raphael.2.1.0.min.js"></script>
 <script src="../static/js/justgage.1.0.1.min.js"></script>
 
-
 <script type=text/javascript>
   $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
 </script>
-
 
 <script type=text/javascript>
 
@@ -89,7 +86,6 @@
     $('a#calculate').bind('click', function() {
       $.getJSON($SCRIPT_ROOT + '/_compute', {
         sentence: $('textarea[name="sentence"]').val()}, function(data) {
-        $("#result").text(data.result);
 	   g.refresh(data.result);
       });
       return false;
@@ -109,8 +105,6 @@ var g;
     labelFontColor : "black"
   }); 
 </script>
-
-
 
   </body>
 </html>

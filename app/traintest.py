@@ -1,7 +1,7 @@
 """ This function is used to do experiments on the data and to save a topic modeler,
 a dictionnary of features and a classifier. It first trains a topic modeler using all
 tweets, then it generates the features for all tweets and then train a classifier
-using these features.  It output a report showing the accuracy of the classifier. """
+using these features.  It outputs a report showing the accuracy of the classifier. """
 
 import nltk
 import numpy as np

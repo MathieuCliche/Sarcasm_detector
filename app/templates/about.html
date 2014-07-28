@@ -62,12 +62,10 @@
 <div class="container4" >
 			<form class="form-search" style="text-align:center;" >	
 
-
-
 	<div class="contentTitle"> Why a sarcasm detector?</div>   
 
 <br />
-          <div class="contentText"> This all started when I was looking for a toy project to teach myself <a href="http://en.wikipedia.org/wiki/Natural_language_processing" target="_top">natural language processing</a> (NLP), a field that takes ideas from machine learning and applies them to text data.  Your email spam filter is an application of NLP; there is a learning algorithm that learns how to differentiate a spam email from a regular email by looking at the text content of the email. It had just came out in the <a href="http://www.bbc.com/news/technology-27711109" target="_top">news</a> that the U.S. secret service was looking for a sarcasm detector to improve their intelligence coming from Twitter and I was curious to see whether this was even possible.  This was a perfect project to use NLP, so I decided to give it a try!
+          <div class="contentText"> This all started when I was looking for a toy project to teach myself <a href="http://en.wikipedia.org/wiki/Natural_language_processing" target="_top">natural language processing</a> (NLP), a field that takes ideas from machine learning and applies them to text data.  Your email spam filter is an application of NLP; there is a learning algorithm that learns how to differentiate a spam email from a regular email by looking at the text content of the email. It had just came out in the <a href="http://www.bbc.com/news/technology-27711109" target="_top">news</a> that the U.S. secret service was looking for a sarcasm detector to improve their intelligence coming from Twitter and I was curious to see whether this was even possible.  This was a perfect project to use NLP, so I decided to give it a try.
 <br /><br/>
 
         It wasn't clear to me that this was possible because sarcasm is a complicated concept.  Let's go back to the spam filter example for a minute.  If you look at a spam filter algorithm, the features which will be most relevant to the classification of emails will be certain key words: <i>Notspam</i>, <i>Free access</i> or <i>Enlarge your ...</i> for instance.  A good learning algorithm will learn the vocabulary associated with spam emails, so when presented with an email which contains words in that vocabulary the classifier will classify that email as spam.  My initial intuition was that sarcasm detection is more complicated than spam detection, because I didn't think there was a vocabulary associated with sarcastic sentences.  I thought sarcasm is hidden in the tone and the ambivalence of the sentence.  <a href="http://www.merriam-webster.com/dictionary/sarcasm" target="_top">Merriam-Webster</a> defines sarcasm as <i>the use of words that mean the opposite of what you really want to say especially in order to insult someone, to show irritation, or to be funny</i>.  So to detect sarcasm properly a computer would have to figure out that you meant the opposite of what you just said.  It is sometimes hard for Humans to detect sarcasm, and Humans have a much better grasp at the English language than computers do, so this was not going to be an easy task. 
@@ -84,7 +82,6 @@ The obvious advantage from taking our data from Twitter is that we can have as m
 <br /><br/>
 
 However there is a drawback from taking our data from Twitter; it's noisy.  Some people use the #sarcasm to point out that their tweet was meant to be sarcastic, but a Human would not have been able to guess that the tweet was sarcastic without the #sarcasm (example: <i>What a great summer vacation I've been having so far :) #sarcasm</i>).  One may argue however that this is not really noise since the tweet is still sarcastic, at least according to the tweet's owner, and that sarcasm is in the eyes of the beholder.  The converse also happens, someone may write a tweet which is clearly sarcastic but without the #sarcasm.  There are also instances of sarcastic tweets where the sarcasm is in a linked picture or article.  Sometimes tweets are responses to other tweets, in which case the sarcasm can only be understood within the context of the previous tweets.  Sometime the #sarcasm is meant to indicate that, while the tweet itself is not sarcastic, some of its hashtags are (example: <i>Time to do my homework #yay #sarcasm</i>).  I will discuss in the next section how to remove most of that noise, but short of reading all the tweets and labeling them by hand we cannot remove all the noise.   </div>
-
 
 <div class="contentTitle">  Preprocessing the data</div>
 <br />
@@ -107,7 +104,6 @@ However there is a drawback from taking our data from Twitter; it's noisy.  Some
 <br />
 <div class="contentText"> There is a very wide range of machine learning algorithms to choose from, most of which are available in the python library <a href="http://scikit-learn.org/stable/" target="_top">Scikit-learn</a>.  However, most of the implementations of these algorithms do not accept sparse matrices as inputs, and since we have a large number of nominal features coming from our n-grams features it is imperative that we encode our features in a sparse matrix.  Out of the algorithms that do support sparse matrices, I ended up trying naive Bayes, logistic regression and <a href="http://en.wikipedia.org/wiki/Support_vector_machine" target="_top">support vector machine</a> (SVM) with a linear kernel.  I got the best results in cross validation using SVM with an euclidean regularization coefficient of 0.1.  
 
-
 <br /><br/>
 
 The metric I use to guide my cross-validation is the <a href="http://en.wikipedia.org/wiki/Precision_and_recall" target="_top">F-score</a>.  This is a good metric when we have a lot more samples from a category than from the other categories.  In our case we have 5 times more non-sarcastic tweets than sarcastic tweets.  If we just use the accuracy as a metric, that is the number of correct predictions divided by the total number of tweets in our cross-validation set, then a simple classifier which always predicts the tweets as non-sarcastic would get a 83% accuracy. This is obviously very misleading so we need a better metric.  We can do better by considering precision and recall for the sarcastic category.  Precision is the number sarcastic tweets correctly identified divided by the total number of tweets classified as sarcastic, while recall is the number sarcastic tweets correctly identified divided by the total number of sarcastic tweets in the cross validation set.  Both precision and recall would be equal to 0% with a dumb classifier which always predicts tweets to be non-sarcastic, so these are already much better score to quantify the quality of a sarcasm classifier. The F-score is simply the harmonic mean of precision and recall.</div>
@@ -115,12 +111,10 @@ The metric I use to guide my cross-validation is the <a href="http://en.wikipedi
 <div class="contentTitle">  Results and insights</div>
 <br />
 
-
 <div class="contentText">
 To understand the relative importance of each set of features, we can train our algorithm using only n-grams, only the sentiments or only the topics and look at the corresponding F-scores. For the n-grams we get F = 0.56, while for the sentiments we get F = 0.41 and for the topics we get F = 0.35. Note that the addition of all the features will not give an F-score which is a linear addition of the individual F-scores, but we should expect an improvement by combining the features together.  Initially I thought that the main features would come from the sentiment analysis but the n-grams are by far the most important features.  This shows that there is a vocabulary associated with sarcasm after all and it's not just about the tone!
 
 <br /><br/>
-
 
 To gain some insight into what the algorithm has learned, we can look at the coefficients of our features in the trained SVM to see which ones are the most important.  For n-grams, the features which are the most important to classify sarcastic tweets are <i>just what</i>, <i>yay</i>, <i>perfect time</i>, <i>a blast</i>, <i>shocker</i>, <i>just love</i>, etc.  These n-grams all make perfect sense, but since I streamed the tweets during the 2014 FIFA world cup I also ended up with tree relevant unigrams for sarcastic tweets that are somewhat unexpected: <i>rooney</i>, <i>brazil</i> and <i>suarez</i>.  The most relevant n-grams for the classification of non-sarcastic tweets are <i>feel good</i>, <i>spend some</i>, <i>pray</i>, <i>too funny</i>, <i>be nice</i>, <i>goodnight</i>, etc. For the sentiment analysis, the classifier learned that sarcastic tweets are overall slightly more positive than non-sarcastic tweets and that the first half of a sarcastic tweet is more often positive while the last half of a sarcastic tweet is more often negative.  However what seems to matter the most is the subjectivity which is also measured by the library Textblob.  This means that sarcastic tweets are more about expressing feelings, either positive or negative, than non-sarcastic tweets.  Finally, the topic modeler learned that topics which contain words such as <i>love</i>, <i>life</i>, <i>today</i>, <i>lol</i>, <i>feel</i>, <i>bad</i> etc. are more associated with sarcastic tweets while topics which contain words such as <i>jersey</i>, <i>procrastinating</i>, <i>hot</i>, <i>complain</i>, <i>storm</i>, <i>mom</i>, etc. are more associated with non-sarcastic tweets.  
 
@@ -129,13 +123,11 @@ To gain some insight into what the algorithm has learned, we can look at the coe
 After the cross-validation phase, I tested my sarcasm classifier on a separate test set made of 24 000 tweets and obtained an <b>F-score of 0.60</b>.  This is a small improvement over the previous studies in sarcasm detection using tweets which obtained F-scores in the range 0.50-0.55, see references [1]-[4].  The previous work on sarcasm detection uses only n-grams features and/or rule-based features and classification.  Our analysis improves over those previous ones by incorporating a sentiment decomposition analysis and a topic modeling analysis.  Moreover we used a modern machine learning algorithm, SVM, which is not rule-based.
 </div>
 
-
 <div class="contentTitle">  Outlook
 </div>
 <br />
 <div class="contentText"> I think sarcasm detection is a really fascinating subject, and I'm not being sarcastic!  It's not clear to me whether or not my sarcasm detector would be useful for the U.S. secret service, but I do feel confident that I answered my original question; it is possible to detect sarcasm using tools from NLP.  One quick way to improve my detector would be to incorporate a spell check for the tweets.  This should reduce the number of dimensions of the dictionary for the n-grams features and improve the sentiment analysis as well.  I did some preliminary experiments with the spell check of the library Textblob but I did not get any improvements using it, perhaps a better spell checker would do better.  
 </div>
-
 
 <div class="contentTitle">  The tools used</div>
 <br />
@@ -146,7 +138,6 @@ After the cross-validation phase, I tested my sarcasm classifier on a separate t
 
 The code can be found on <a href="https://github.com/MathieuCliche/Sarcasm_detector" target="_top">https://github.com/MathieuCliche/Sarcasm_detector</a>
 </div>
-
 
 <div class="contentTitle">  References
 </div>
@@ -170,13 +161,9 @@ in Twitter and Amazon</i></a>
 		</form>
 	</div>
 </div>
-								
-
 
     <script src="../static/js/jquery-1.11.1.min.js"></script>
     <script src="../static/js/bootstrap.min.js"></script>
-
-
 
   </body>
 </html>
