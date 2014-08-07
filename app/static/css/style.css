@@ -199,7 +199,17 @@ min-width: 400px;
 border-radius: 10px;
 }
 
-
+.container3 {
+  padding-right: 15px;
+  padding-left: 15px;
+ padding-top:15px;
+    background: rgba(255, 255, 255, 0.9);
+margin: 0 auto;
+text-align: center;
+width: 40%;
+min-width: 500px;
+border-radius: 10px;
+}
 .container4 {
   padding-right: 15px;
   padding-left: 15px;
@@ -250,4 +260,16 @@ a:visited {
 /* selected link */
 a:active {
     color: #4B0082;
+}
+
+
+
+.post-thumb {
+    float: left
+}
+.post-thumb img {
+    display: block
+}
+.post-content {
+    margin-left: 210px
 }
