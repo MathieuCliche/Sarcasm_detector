@@ -39,12 +39,12 @@ def preprocessing(csv_file_object):
 print 'Extracting data'
 
 ### POSITIVE DATA ####
-csv_file_object_pos = csv.reader(open('twitDB_sarcasm.csv', 'rU'))
+csv_file_object_pos = csv.reader(open('twitDB_sarcasm.csv', 'rU'),delimiter='\n')
 pos_data, length_pos = preprocessing(csv_file_object_pos)
 
 
 ### NEGATIVE DATA ####
-csv_file_object_neg = csv.reader(open('twitDB_regular.csv', 'rU'))
+csv_file_object_neg = csv.reader(open('twitDB_regular.csv', 'rU'),delimiter='\n')
 neg_data, length_neg = preprocessing(csv_file_object_neg)
 
 print 'Number of  sarcastic tweets :', len(pos_data)
