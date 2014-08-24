@@ -50,6 +50,7 @@ def sent_feature(features,sentence):
     mean_sentiment = sentiments.score_sentence(tokens)
     features['Positive sentiment'] = mean_sentiment[0]
     features['Negative sentiment'] = mean_sentiment[1]
+    features['Sentiment'] = mean_sentiment[0]-mean_sentiment[1]
     
     #TextBlob sentiment analysis
     try:
@@ -70,10 +71,14 @@ def sent_feature(features,sentence):
     mean_sentiment_f = sentiments.score_sentence(f_half)
     features['Positive sentiment 1/2'] = mean_sentiment_f[0]
     features['Negative sentiment 1/2'] = mean_sentiment_f[1]
+    features['Sentiment 1/2'] = mean_sentiment_f[0]-mean_sentiment_f[1]
     
     mean_sentiment_s = sentiments.score_sentence(s_half)
     features['Positive sentiment 2/2'] = mean_sentiment_s[0]
     features['Negative sentiment 2/2'] = mean_sentiment_s[1]
+    features['Sentiment 2/2'] = mean_sentiment_s[0]-mean_sentiment_s[1]
+    
+    features['Sentiment contrast 2'] = np.abs(features['Sentiment 1/2']-features['Sentiment 2/2'])
 
      #TextBlob sentiment analysis
     try:
@@ -90,6 +95,8 @@ def sent_feature(features,sentence):
     except:
         features['Blob sentiment 2/2'] = 0.0
         features['Blob subjectivity 2/2'] = 0.0
+        
+    features['Blob Sentiment contrast 2'] = np.abs(features['Blob sentiment 1/2']-features['Blob sentiment 2/2'])
 
     #Split in 3
     if len(tokens)==2:
@@ -101,14 +108,19 @@ def sent_feature(features,sentence):
     mean_sentiment_f = sentiments.score_sentence(f_half)
     features['Positive sentiment 1/3'] = mean_sentiment_f[0]
     features['Negative sentiment 1/3'] = mean_sentiment_f[1]
+    features['Sentiment 1/3'] = mean_sentiment_f[0]-mean_sentiment_f[1]
     
     mean_sentiment_s = sentiments.score_sentence(s_half)
     features['Positive sentiment 2/3'] = mean_sentiment_s[0]
     features['Negative sentiment 2/3'] = mean_sentiment_s[1]
+    features['Sentiment 2/3'] = mean_sentiment_s[0]-mean_sentiment_s[1]
     
     mean_sentiment_t = sentiments.score_sentence(t_half)
     features['Positive sentiment 3/3'] = mean_sentiment_t[0]
     features['Negative sentiment 3/3'] = mean_sentiment_t[1]
+    features['Sentiment 3/3'] = mean_sentiment_t[0]-mean_sentiment_t[1]
+    
+    features['Sentiment contrast 3'] = np.abs(features['Sentiment 1/3']-features['Sentiment 3/3'])
     
     #TextBlob sentiment analysis
     try:
@@ -132,6 +144,8 @@ def sent_feature(features,sentence):
     except:
         features['Blob sentiment 3/3'] = 0.0
         features['Blob subjectivity 3/3'] = 0.0
+        
+    features['Blob Sentiment contrast 3'] = np.abs(features['Blob sentiment 1/3']-features['Blob sentiment 3/3'])
     
 def pos_feature(features,sentence):
     

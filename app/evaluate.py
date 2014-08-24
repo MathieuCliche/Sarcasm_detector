@@ -28,4 +28,5 @@ def tweetscore(sentence):
     percentage = int(round(2.0*(1.0/(1.0+np.exp(-score))-0.5)*100.0))
     
     return percentage
+
     
